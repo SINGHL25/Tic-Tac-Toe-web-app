@@ -1,5 +1,3 @@
 # run.py
-from app import main
-
-if __name__ == '__main__':
-    main.run_app()
+import os
+os.system("streamlit run app/main.py --server.fileWatcherType none")
