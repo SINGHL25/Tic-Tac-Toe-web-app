@@ -43,7 +43,8 @@ def run_app():
                 st.session_state.start = True
                 st.session_state.board = ["" for _ in range(9)]
                 st.session_state.current = 0
-                st.experimental_rerun()
+                st.rerun()
+
 
     if not st.session_state.start:
         st.info("Add players and click Start Game")
