@@ -6,7 +6,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import streamlit as st
 from utils.tic_tac_toe import TicTacToe
-from utils.celebration import show_winner_celebration
+#from utils.celebration import show_winner_celebration
 
 import time
 
