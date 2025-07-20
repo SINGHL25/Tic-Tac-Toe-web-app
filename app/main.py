@@ -77,7 +77,7 @@ def run_app():
                         while st.session_state.players[next_player]["name"].strip() == "":
                             next_player = (next_player + 1) % len(st.session_state.players)
                         st.session_state.current = next_player
-                  st.rerun()
+                        st.rerun()
 
             else:
                 cols[j].write(f"**{mark}**")
