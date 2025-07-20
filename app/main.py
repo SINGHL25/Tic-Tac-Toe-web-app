@@ -6,10 +6,12 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import streamlit as st
 from utils.tic_tac_toe import TicTacToe
 try:
-    from utils.celebration import show_winner_celebration
-except ImportError:
-    show_winner_celebration = None
-    print("⚠️ 'show_winner_celebration' import failed. Skipping celebrations.")
+    show_winner_celebration(current_player)
+except NameError:
+    pass  # Celebration function is not available
+except Exception as e:
+    st.warning(f"Celebration could not run: {e}")
+
 
 
 def run_app():
