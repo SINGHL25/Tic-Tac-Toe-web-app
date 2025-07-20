@@ -5,7 +5,12 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 import streamlit as st
 from utils.tic_tac_toe import TicTacToe
-from utils.celebration import show_winner_celebration
+try:
+    from utils.celebration import show_winner_celebration
+except ImportError:
+    show_winner_celebration = None
+    print("⚠️ 'show_winner_celebration' import failed. Skipping celebrations.")
+
 
 def run_app():
     st.set_page_config(page_title="Tic Tac Toe - Scrum Battle", layout="centered")
