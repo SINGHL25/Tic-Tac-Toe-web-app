@@ -1,7 +1,14 @@
 # app/main.py
-import streamlit as st
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from utils.tic_tac_toe import TicTacToe
 from utils.helper import show_winner_celebration
+
+
+import streamlit as st
+
 import time
 
 players = []
