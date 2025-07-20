@@ -1,5 +1,9 @@
-import streamlit as st
+# utils/celebration.py
 
-def show_winner_celebration(winner_name):
+import streamlit as st
+import time
+
+def show_winner_celebration(winner):
     st.balloons()
-    st.success(f"🎉 Congratulations {winner_name}! You will host the next Scrum! 🎉")
+    st.success(f"🎉 Player {winner} wins the game!")
+    time.sleep(1)
